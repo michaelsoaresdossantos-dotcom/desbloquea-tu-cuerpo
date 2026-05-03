@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Desbloquea Tu Cuerpo — El Método de la Presencia Masculina | Michael Soares</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0A0A0A;
+    --red: #E30613;
+    --red-dark: #A00010;
+    --white: #FFFFFF;
+    --gray: #888888;
+    --gray-light: #CCCCCC;
+    --gray-mid: #333333;
+    --gold: #C9A84C;
+    --dark: #111111;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+  }
+
+  .topbar { background: var(--red); text-align: center; padding: 10px 20px; font-size: 13px; font-weight: 600; letter-spacing: 1px; }
+
+  .hero { min-height: 100vh; position: relative; display: flex; align-items: center; overflow: hidden; padding: 80px 40px; }
+  .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(227,6,19,0.25) 0%, transparent 65%), linear-gradient(135deg, #0A0A0A 50%, #1a0305 100%); z-index: 0; }
+  .hero-accent { position: absolute; top: 0; right: 0; width: 6px; height: 100%; background: var(--red); z-index: 2; }
+  .hero-accent-gold { position: absolute; top: 0; right: 6px; width: 2px; height: 40%; background: var(--gold); z-index: 2; }
+  .hero-content { position: relative; z-index: 2; max-width: 720px; }
+  .hero-tag { display: inline-block; background: var(--red); color: var(--white); font-size: 10px; font-weight: 700; letter-spacing: 3px; padding: 6px 14px; margin-bottom: 32px; text-transform: uppercase; }
+  .hero-pre { font-size: clamp(14px, 2vw, 17px); font-weight: 400; color: var(--gray-light); margin-bottom: 8px; letter-spacing: 1px; }
+  .hero-pre span { color: var(--red); font-weight: 700; }
+  .hero h1 { font-family: 'Oswald', sans-serif; font-size: clamp(60px, 10vw, 110px); font-weight: 700; line-height: 0.9; text-transform: uppercase; color: var(--white); }
+  .hero h1 .red { color: var(--red); }
+  .hero-rule { width: 200px; height: 3px; background: linear-gradient(to right, var(--gold), transparent); margin: 24px 0; }
+  .hero-sub { font-size: clamp(14px, 1.8vw, 17px); font-weight: 400; color: var(--gray-light); line-height: 1.7; max-width: 520px; margin-bottom: 40px; }
+  .hero-cta { display: inline-block; background: var(--red); color: var(--white); font-family: 'Oswald', sans-serif; font-size: 20px; font-weight: 600; letter-spacing: 2px; padding: 20px 48px; text-decoration: none; text-transform: uppercase; transition: all 0.2s ease; }
+  .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(227,6,19,0.4); background: #c0000f; }
+  .hero-price-note { margin-top: 16px; font-size: 13px; color: var(--gray); }
+  .hero-price-note del { color: var(--gray); }
+  .hero-price-note strong { color: var(--white); font-size: 16px; }
+
+  section { padding: 80px 40px; }
+  .container { max-width: 820px; margin: 0 auto; }
+  .section-tag { display: inline-block; background: var(--red); color: var(--white); font-size: 9px; font-weight: 700; letter-spacing: 3px; padding: 5px 12px; text-transform: uppercase; margin-bottom: 20px; }
+  h2 { font-family: 'Oswald', sans-serif; font-size: clamp(36px, 6vw, 58px); font-weight: 700; text-transform: uppercase; line-height: 1; margin-bottom: 16px; }
+  .rule { width: 80px; height: 2px; background: var(--gold); margin-bottom: 32px; }
+  p { font-size: 15px; color: var(--gray-light); line-height: 1.8; margin-bottom: 20px; }
+
+  .identification { background: var(--dark); }
+  .id-list { list-style: none; margin: 32px 0; }
+  .id-list li { display: flex; align-items: flex-start; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--gray-mid); font-size: 15px; color: var(--gray-light); }
+  .id-list li:last-child { border-bottom: none; }
+  .id-dot { width: 10px; height: 10px; background: var(--red); border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+  .id-conclusion { background: var(--gray-mid); border-left: 4px solid var(--red); padding: 20px 24px; margin-top: 24px; }
+  .id-conclusion p { margin: 0; font-weight: 600; color: var(--white); font-size: 15px; }
+  .id-conclusion p span { color: var(--red); }
+
+  .problem { background: var(--black); }
+  .problem-statement { font-family: 'Oswald', sans-serif; font-size: clamp(28px, 5vw, 48px); font-weight: 700; text-transform: uppercase; line-height: 1.1; margin: 32px 0; }
+  .problem-statement .highlight { color: var(--red); }
+  .problem-statement .small { font-size: 0.65em; color: var(--gray); display: block; }
+
+  .solution { background: linear-gradient(135deg, #0f0f0f 0%, #1a0305 100%); position: relative; overflow: hidden; }
+  .solution::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--red); }
+
+  .authority { background: var(--dark); border-top: 1px solid var(--gray-mid); }
+  .authority-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 60px; align-items: start; margin-top: 40px; }
+  @media(max-width: 700px) { .authority-inner { grid-template-columns: 1fr; gap: 32px; } }
+  .authority-avatar { background: var(--gray-mid); border: 3px solid var(--red); aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif; font-size: 72px; font-weight: 700; color: rgba(227,6,19,0.3); position: relative; overflow: hidden; }
+  .authority-avatar::after { content: 'MS'; position: absolute; font-size: 120px; color: rgba(227,6,19,0.08); }
+  .authority-name { font-family: 'Oswald', sans-serif; font-size: clamp(28px, 4vw, 42px); font-weight: 700; text-transform: uppercase; line-height: 1; margin-bottom: 6px; }
+  .authority-title { font-size: 12px; letter-spacing: 3px; color: var(--red); text-transform: uppercase; margin-bottom: 28px; font-weight: 600; }
+  .authority-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin: 28px 0; }
+  .stat-item { background: var(--gray-mid); padding: 20px; border-left: 3px solid var(--red); }
+  .stat-item:nth-child(even) { border-left-color: var(--gold); }
+  .stat-num { font-family: 'Oswald', sans-serif; font-size: 36px; font-weight: 700; color: var(--white); line-height: 1; }
+  .stat-label { font-size: 11px; color: var(--gray); letter-spacing: 1px; margin-top: 4px; line-height: 1.4; }
+  .authority-bio { font-size: 14px; color: var(--gray-light); line-height: 1.8; margin: 0; }
+  .authority-bio strong { color: var(--white); }
+
+  .benefits { background: var(--black); }
+  .benefit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 40px; }
+  @media(max-width: 600px) { .benefit-grid { grid-template-columns: 1fr; } }
+  .benefit-item { background: var(--gray-mid); padding: 24px; border-left: 3px solid transparent; transition: border-color 0.2s; }
+  .benefit-item:hover { border-left-color: var(--red); }
+  .benefit-item:nth-child(odd):hover { border-left-color: var(--gold); }
+  .benefit-icon { width: 36px; height: 36px; background: var(--red); display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 700; margin-bottom: 14px; }
+  .benefit-title { font-family: 'Oswald', sans-serif; font-size: 16px; font-weight: 600; text-transform: uppercase; color: var(--white); margin-bottom: 8px; }
+  .benefit-desc { font-size: 13px; color: var(--gray); line-height: 1.6; margin: 0; }
+
+  .method { background: var(--dark); }
+  .pillars { margin-top: 40px; display: flex; flex-direction: column; gap: 2px; }
+  .pillar { display: flex; align-items: center; background: var(--gray-mid); overflow: hidden; transition: background 0.2s; }
+  .pillar:hover { background: #3a3a3a; }
+  .pillar-num { background: var(--red); font-family: 'Oswald', sans-serif; font-size: 28px; font-weight: 700; color: var(--white); width: 70px; min-width: 70px; height: 70px; display: flex; align-items: center; justify-content: center; }
+  .pillar-content { padding: 16px 24px; }
+  .pillar-title { font-family: 'Oswald', sans-serif; font-size: 18px; font-weight: 600; color: var(--white); text-transform: uppercase; margin-bottom: 4px; }
+  .pillar-desc { font-size: 13px; color: var(--gray); margin: 0; }
+
+  .transformation { background: var(--black); }
+  .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 40px; }
+  @media(max-width: 600px) { .before-after { grid-template-columns: 1fr; } }
+  .before, .after { padding: 36px; }
+  .before { background: #1a1a1a; border-top: 4px solid #444; }
+  .after { background: #1a0305; border-top: 4px solid var(--red); }
+  .ba-label { font-family: 'Oswald', sans-serif; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--gray); margin-bottom: 20px; }
+  .after .ba-label { color: var(--red); }
+  .ba-list { list-style: none; }
+  .ba-list li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 14px; display: flex; gap: 12px; align-items: flex-start; }
+  .ba-list li:last-child { border-bottom: none; }
+  .ba-marker { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+  .before .ba-marker { color: #555; }
+  .after .ba-marker { color: var(--red); }
+  .ba-text strong { display: block; font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+  .before .ba-text strong { color: #666; }
+  .after .ba-text strong { color: var(--white); }
+  .ba-text span { font-size: 12px; color: var(--gray); }
+
+  .testimonials { background: var(--dark); }
+  .testi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; }
+  @media(max-width: 600px) { .testi-grid { grid-template-columns: 1fr; } }
+  .testi-item { background: var(--gray-mid); padding: 28px; border-left: 3px solid var(--red); }
+  .testi-quote { font-size: 40px; color: rgba(227,6,19,0.3); font-family: Georgia, serif; line-height: 1; margin-bottom: 12px; }
+  .testi-text { font-size: 14px; color: var(--gray-light); line-height: 1.7; margin-bottom: 16px; font-style: italic; }
+  .testi-author { font-size: 12px; font-weight: 700; color: var(--white); text-transform: uppercase; letter-spacing: 1px; }
+  .testi-role { font-size: 11px; color: var(--gray); margin-top: 3px; }
+  .testi-note { background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.2); padding: 16px 20px; margin-top: 32px; font-size: 12px; color: var(--gold); text-align: center; letter-spacing: 0.5px; }
+
+  .price-section { background: linear-gradient(135deg, #0f0505 0%, #1a0305 100%); text-align: center; border-top: 4px solid var(--red); }
+  .timer-block { background: rgba(0,0,0,0.4); border: 1px solid rgba(227,6,19,0.3); padding: 20px; margin-bottom: 32px; display: inline-block; min-width: 320px; }
+  .timer-label { font-size: 10px; letter-spacing: 3px; color: var(--gray); text-transform: uppercase; margin-bottom: 12px; }
+  .timer-digits { display: flex; align-items: center; justify-content: center; gap: 8px; }
+  .timer-unit { text-align: center; }
+  .timer-num { font-family: 'Oswald', sans-serif; font-size: 42px; font-weight: 700; color: var(--red); line-height: 1; min-width: 54px; background: rgba(227,6,19,0.1); padding: 4px 8px; }
+  .timer-sep { font-family: 'Oswald', sans-serif; font-size: 36px; color: var(--red); opacity: 0.5; margin-bottom: 16px; }
+  .timer-unit-label { font-size: 9px; color: var(--gray); letter-spacing: 2px; text-transform: uppercase; margin-top: 4px; }
+  .price-box { max-width: 520px; margin: 0 auto; background: var(--gray-mid); padding: 48px; position: relative; }
+  .price-box::before { content: ''; position: absolute; inset: 0; border: 1px solid rgba(227,6,19,0.3); pointer-events: none; }
+  .price-original { font-size: 18px; color: var(--gray); text-decoration: line-through; margin-bottom: 8px; display: block; }
+  .price-main { font-family: 'Oswald', sans-serif; font-size: 72px; font-weight: 700; color: var(--white); line-height: 1; margin-bottom: 8px; }
+  .price-main sup { font-size: 32px; vertical-align: top; margin-top: 10px; display: inline-block; }
+  .price-note { font-size: 13px; color: var(--gray); margin-bottom: 36px; }
+  .price-cta { display: block; background: var(--red); color: var(--white); font-family: 'Oswald', sans-serif; font-size: 22px; font-weight: 600; letter-spacing: 2px; padding: 22px 48px; text-decoration: none; text-transform: uppercase; transition: all 0.2s ease; margin-bottom: 20px; }
+  .price-cta:hover { background: #c0000f; transform: translateY(-2px); box-shadow: 0 10px 40px rgba(227,6,19,0.4); }
+  .price-guarantee { font-size: 12px; color: var(--gray); display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 16px; }
+  .guarantee-icon { width: 32px; height: 32px; border: 2px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; }
+
+  .guarantee-section { background: var(--dark); border-top: 1px solid var(--gray-mid); }
+  .guarantee-box { display: flex; align-items: center; gap: 40px; max-width: 700px; margin: 0 auto; }
+  @media(max-width: 600px) { .guarantee-box { flex-direction: column; text-align: center; } }
+  .guarantee-badge { width: 120px; height: 120px; border: 3px solid var(--gold); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; flex-shrink: 0; font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+  .guarantee-badge .days { font-size: 44px; font-weight: 700; color: var(--gold); line-height: 1; }
+  .guarantee-badge .dias { font-size: 11px; color: var(--gray); letter-spacing: 2px; }
+
+  .faq-section { background: var(--black); }
+  .faq-list { margin-top: 40px; display: flex; flex-direction: column; gap: 2px; }
+  .faq-item { background: var(--gray-mid); overflow: hidden; }
+  .faq-question { padding: 22px 24px; font-family: 'Oswald', sans-serif; font-size: 17px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; transition: background 0.2s; }
+  .faq-question:hover { background: #3a3a3a; }
+  .faq-question.open { color: var(--red); }
+  .faq-arrow { font-size: 20px; color: var(--red); transition: transform 0.3s ease; flex-shrink: 0; margin-left: 16px; }
+  .faq-question.open .faq-arrow { transform: rotate(45deg); }
+  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; padding: 0 24px; }
+  .faq-answer.open { max-height: 300px; padding: 0 24px 22px; }
+  .faq-answer p { font-size: 14px; color: var(--gray-light); margin: 0; line-height: 1.8; }
+
+  .final-cta { background: var(--black); text-align: center; border-top: 4px solid var(--red); padding: 80px 40px 100px; }
+  .final-cta h2 { margin-bottom: 8px; }
+  .final-cta p { max-width: 500px; margin: 0 auto 40px; }
+
+  footer { background: #050505; border-top: 1px solid var(--gray-mid); padding: 32px 40px; text-align: center; }
+  .footer-logo { font-family: 'Oswald', sans-serif; font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+  .footer-logo span { color: var(--red); }
+  .footer-tagline { font-size: 11px; color: var(--gray); letter-spacing: 3px; margin-bottom: 16px; }
+  .footer-copy { font-size: 11px; color: #444; }
+
+  .sticky-cta { position: fixed; bottom: 0; left: 0; right: 0; background: var(--red); z-index: 999; display: flex; align-items: center; justify-content: center; gap: 24px; padding: 14px 20px; transform: translateY(100%); transition: transform 0.4s ease; }
+  .sticky-cta.visible { transform: translateY(0); }
+  .sticky-price { font-size: 13px; color: rgba(255,255,255,0.8); }
+  .sticky-price del { color: rgba(255,255,255,0.5); }
+  .sticky-price strong { color: white; font-size: 18px; }
+  .sticky-btn { background: var(--white); color: var(--red); font-family: 'Oswald', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; padding: 10px 28px; text-decoration: none; text-transform: uppercase; white-space: nowrap; transition: opacity 0.2s; }
+  .sticky-btn:hover { opacity: 0.9; }
+  @media(max-width: 480px) { .sticky-cta { flex-direction: column; gap: 10px; padding: 12px; } }
+
+  .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<div class="topbar">🔴 LANZAMIENTO — Oferta por tiempo limitado: De $34 por solo $17</div>
+
+<section class="hero">
+  <div class="hero-accent"></div>
+  <div class="hero-accent-gold"></div>
+  <div class="hero-content fade-up visible">
+    <div class="hero-tag">El Método de la Presencia Masculina • por Michael Soares</div>
+    <p class="hero-pre">No estás roto. <span>Estás bloqueado.</span></p>
+    <h1>DESBLOQUEA<br><span class="red">TU CUERPO</span></h1>
+    <div class="hero-rule"></div>
+    <p class="hero-sub">Descubre por qué los hombres de 40+ se bloquean — y el método práctico para desbloquear tu cuerpo, recuperar tu presencia y volver a ser percibido como realmente eres.</p>
+    <a href="https://michaeldossantos.gumroad.com/l/desbloquea-tu-cuerpo" class="hero-cta">Quiero Desbloquearme Ahora →</a>
+    <p class="hero-price-note"><del>De $34.00</del> — por solo <strong>$17.00</strong> &nbsp;|&nbsp; Acceso inmediato</p>
+  </div>
+</section>
+
+<section class="identification">
+  <div class="container">
+    <span class="section-tag">¿Te identificas?</span>
+    <h2>¿Estas señales<br><span style="color:var(--red)">te describen?</span></h2>
+    <div class="rule"></div>
+    <ul class="id-list">
+      <li><span class="id-dot"></span>Evitas exponerte o ser el centro de atención.</li>
+      <li><span class="id-dot"></span>Sientes tensión constante en el cuerpo y la mandíbula.</li>
+      <li><span class="id-dot"></span>Te cuesta iniciar conversaciones o acercarte a las personas.</li>
+      <li><span class="id-dot"></span>Te sientes inseguro aunque sabes de lo que eres capaz.</li>
+      <li><span class="id-dot"></span>Te cansas fácil, tienes poca energía y motivación.</li>
+      <li><span class="id-dot"></span>Vives en piloto automático, sin presencia real ni alegría.</li>
+    </ul>
+    <div class="id-conclusion">
+      <p>Esto no es falta de confianza. <span>Es un bloqueo corporal.</span> Y tiene solución.</p>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="container fade-up">
+    <span class="section-tag">El problema real</span>
+    <h2>La mayoría busca<br>la <span style="color:var(--red)">solución equivocada</span></h2>
+    <div class="rule"></div>
+    <p>La mayoría de los hombres busca la solución en la cabeza — más libros, más videos, más información. Pero el bloqueo continúa.</p>
+    <div class="problem-statement">
+      El problema<br>
+      <span class="highlight">no está en la mente.</span><br>
+      <span class="small">Empezó en el cuerpo.</span>
+    </div>
+    <p>Tensión acumulada. Emociones reprimidas. Patrones invisibles grabados en el tejido muscular durante años. El cuerpo se bloquea. La presencia se debilita. La vida pasa.</p>
+    <p style="color:var(--white); font-weight:600;">La mente sigue al cuerpo — no al revés.</p>
+  </div>
+</section>
+
+<section class="solution">
+  <div class="container fade-up">
+    <span class="section-tag">La solución</span>
+    <h2>DESBLOQUEA<br><span style="color:var(--red)">TU CUERPO</span></h2>
+    <div class="rule"></div>
+    <p style="font-size:16px; color:var(--gray-light);">Un eBook de <strong style="color:var(--white)">50 páginas</strong> desarrollado para hombres que ya tienen conocimiento, experiencia y capacidad — pero aún sienten que algo los bloquea.</p>
+    <p>No es teoría. Es un sistema práctico de desbloqueo con ejercicios aplicables, insights directos y un método completo de transformación masculina.</p>
+    <p style="color:var(--gold); font-weight:600; font-size:15px;">Cuerpo desbloqueado. Mente libre. Presencia real.</p>
+  </div>
+</section>
+
+<section class="authority">
+  <div class="container fade-up">
+    <span class="section-tag">Quién creó este método</span>
+    <h2>Sobre<br><span style="color:var(--red)">Michael Soares</span></h2>
+    <div class="rule"></div>
+    <div class="authority-inner">
+      <div><div class="authority-avatar">MS</div></div>
+      <div>
+        <div class="authority-name">Michael<br>Soares</div>
+        <div class="authority-title">Profesional de Educación Física • Locutor Deportivo</div>
+        <div class="authority-stats">
+          <div class="stat-item"><div class="stat-num">27</div><div class="stat-label">Años como profesional de educación física</div></div>
+          <div class="stat-item"><div class="stat-num">10</div><div class="stat-label">Años como locutor deportivo en grandes eventos</div></div>
+          <div class="stat-item"><div class="stat-num">CEOs</div><div class="stat-label">Personal trainer de ejecutivos y directores de empresas</div></div>
+          <div class="stat-item"><div class="stat-num">WTR</div><div class="stat-label">Locutor oficial desde 2022 — la mayor liga de trail de Brasil</div></div>
+        </div>
+        <p class="authority-bio">Durante <strong>27 años</strong> trabajando dentro y fuera de grandes empresas — entrenando CEOs, directores y líderes de alto rendimiento — Michael Soares observó un patrón que ningún libro de liderazgo explica: <strong>lo que separa al hombre que es percibido del que pasa desapercibido no está en la mente. Está en el cuerpo.</strong></p>
+        <p class="authority-bio" style="margin-top:12px;">Como locutor oficial de la <strong>WTR (World Trail Races)</strong> y profesional en eventos de alto nivel, Michael combinó décadas de observación del comportamiento humano bajo presión con la ciencia del movimiento para crear el <strong>Método Desbloquea</strong> — un sistema aplicable, directo y transformador.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div class="container fade-up">
+    <span class="section-tag">Lo que recibes</span>
+    <h2>Todo lo que está<br><span style="color:var(--red)">dentro del eBook</span></h2>
+    <div class="rule"></div>
+    <div class="benefit-grid">
+      <div class="benefit-item"><div class="benefit-icon">01</div><div class="benefit-title">El Método Desbloquea</div><p class="benefit-desc">6 pilares para liberar tu presencia y transformar tu vida de forma permanente.</p></div>
+      <div class="benefit-item"><div class="benefit-icon">02</div><div class="benefit-title">5 Ejercicios Prácticos</div><p class="benefit-desc">Aplicables hoy mismo. Postura, respiración, mirada, movimiento y presencia.</p></div>
+      <div class="benefit-item"><div class="benefit-icon">03</div><div class="benefit-title">La Mecánica del Bloqueo</div><p class="benefit-desc">Entiende exactamente por qué te bloqueas y cómo afecta cada área de tu vida.</p></div>
+      <div class="benefit-item"><div class="benefit-icon">04</div><div class="benefit-title">Programa de 3 Semanas</div><p class="benefit-desc">Un plan diario progresivo para incorporar el desbloqueo como identidad.</p></div>
+      <div class="benefit-item"><div class="benefit-icon">05</div><div class="benefit-title">Liderazgo y Legado</div><p class="benefit-desc">Cómo la presencia corporal impacta tu liderazgo, relaciones y legado.</p></div>
+      <div class="benefit-item"><div class="benefit-icon">06</div><div class="benefit-title">Diseño Premium</div><p class="benefit-desc">50 páginas con diseño editorial. Lectura dinámica, escaneable y envolvente.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="method">
+  <div class="container fade-up">
+    <span class="section-tag">Los 6 pilares</span>
+    <h2>El Método<br><span style="color:var(--red)">en 6 etapas</span></h2>
+    <div class="rule"></div>
+    <div class="pillars">
+      <div class="pillar"><div class="pillar-num">01</div><div class="pillar-content"><div class="pillar-title">Consciencia</div><p class="pillar-desc">Observa tu cuerpo sin corregir. El primer paso es darse cuenta.</p></div></div>
+      <div class="pillar"><div class="pillar-num">02</div><div class="pillar-content"><div class="pillar-title">Respiración</div><p class="pillar-desc">Respiración profunda = control emocional. El regulador más poderoso que tienes.</p></div></div>
+      <div class="pillar"><div class="pillar-num">03</div><div class="pillar-content"><div class="pillar-title">Movimiento</div><p class="pillar-desc">Movimiento libre = liberación. El cuerpo guarda memorias que solo el movimiento libera.</p></div></div>
+      <div class="pillar"><div class="pillar-num">04</div><div class="pillar-content"><div class="pillar-title">Expresión</div><p class="pillar-desc">Expresarte = salir del bloqueo. La voz, el gesto y la mirada son extensiones de tu desbloqueo.</p></div></div>
+      <div class="pillar"><div class="pillar-num">05</div><div class="pillar-content"><div class="pillar-title">Exposición</div><p class="pillar-desc">Pequeños riesgos = gran crecimiento. Cada avance debilita el bloqueo.</p></div></div>
+      <div class="pillar"><div class="pillar-num">06</div><div class="pillar-content"><div class="pillar-title">Integración</div><p class="pillar-desc">No cambias — te desbloqueas. Incorpóralo como identidad, no como técnica.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="transformation">
+  <div class="container fade-up">
+    <span class="section-tag">La transformación</span>
+    <h2>Antes y<br><span style="color:var(--red)">después</span></h2>
+    <div class="rule"></div>
+    <div class="before-after">
+      <div class="before">
+        <div class="ba-label">Antes — Bloqueado</div>
+        <ul class="ba-list">
+          <li><span class="ba-marker">✗</span><span class="ba-text"><strong>Bloqueado</strong><span>Cuerpo cerrado, energía contenida</span></span></li>
+          <li><span class="ba-marker">✗</span><span class="ba-text"><strong>Invisible</strong><span>Pasa desapercibido en cualquier lugar</span></span></li>
+          <li><span class="ba-marker">✗</span><span class="ba-text"><strong>Contenido</strong><span>Guarda más de lo que expresa</span></span></li>
+          <li><span class="ba-marker">✗</span><span class="ba-text"><strong>Reactivo</strong><span>Actúa por impulso o se paraliza</span></span></li>
+          <li><span class="ba-marker">✗</span><span class="ba-text"><strong>Vacío</strong><span>Hace pero no siente. Vive pero no está.</span></span></li>
+        </ul>
+      </div>
+      <div class="after">
+        <div class="ba-label">Después — Desbloqueado</div>
+        <ul class="ba-list">
+          <li><span class="ba-marker">✓</span><span class="ba-text"><strong>Presente</strong><span>Ocupa el espacio con intención y fuerza</span></span></li>
+          <li><span class="ba-marker">✓</span><span class="ba-text"><strong>Confiado</strong><span>Seguridad que viene desde adentro</span></span></li>
+          <li><span class="ba-marker">✓</span><span class="ba-text"><strong>Percibido</strong><span>Su energía habla antes que él</span></span></li>
+          <li><span class="ba-marker">✓</span><span class="ba-text"><strong>Intencional</strong><span>Actúa con propósito y claridad</span></span></li>
+          <li><span class="ba-marker">✓</span><span class="ba-text"><strong>Vivo</strong><span>Siente. Expresa. Conecta. Impacta.</span></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials">
+  <div class="container fade-up">
+    <span class="section-tag">Quienes ya se desbloquearon</span>
+    <h2>Resultados<br><span style="color:var(--red)">reales</span></h2>
+    <div class="rule"></div>
+    <div class="testi-grid">
+      <div class="testi-item">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Pasé 20 años construyendo autoridad en mi campo. Pero me bloqueaba en las reuniones más importantes. Después de aplicar el método, mi voz ganó un peso que nunca tuve. La gente me escucha diferente.</p>
+        <div class="testi-author">Marco A.</div>
+        <div class="testi-role">Director Comercial, 47 años</div>
+      </div>
+      <div class="testi-item">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Mi hijo de 15 años me dijo: papá, cambiaste. No sé cómo explicarlo, pero pareces más tú mismo. Eso me quebró de una manera buena. Ningún libro de liderazgo me dio eso.</p>
+        <div class="testi-author">Ricardo M.</div>
+        <div class="testi-role">Ejecutivo, 49 años</div>
+      </div>
+      <div class="testi-item">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Apliqué el pilar de presencia antes de una reunión decisiva. Cerré el mayor contrato de mi carrera ese día. La presencia real vende. Esto no es motivación — es método.</p>
+        <div class="testi-author">Felipe R.</div>
+        <div class="testi-role">CEO, 52 años</div>
+      </div>
+      <div class="testi-item">
+        <div class="testi-quote">"</div>
+        <p class="testi-text">Soy médico. Sabía todo sobre el cuerpo de los demás. No sabía nada sobre mi propio bloqueo. En una semana de práctica consistente me sentí como yo mismo por primera vez en años.</p>
+        <div class="testi-author">André L.</div>
+        <div class="testi-role">Médico, 44 años</div>
+      </div>
+    </div>
+    <div class="testi-note">Los testimonios anteriores son de clientes reales del método. Los resultados individuales varían según la consistencia de aplicación.</div>
+  </div>
+</section>
+
+<section class="price-section">
+  <div class="container fade-up" style="text-align:center;">
+    <span class="section-tag">Inversión</span>
+    <h2 style="margin-bottom:40px;">Tu acceso<br><span style="color:var(--red)">inmediato</span></h2>
+    <div class="timer-block">
+      <div class="timer-label">⏱ La oferta termina en</div>
+      <div class="timer-digits">
+        <div class="timer-unit"><div class="timer-num" id="t-h">00</div><div class="timer-unit-label">horas</div></div>
+        <div class="timer-sep">:</div>
+        <div class="timer-unit"><div class="timer-num" id="t-m">00</div><div class="timer-unit-label">min</div></div>
+        <div class="timer-sep">:</div>
+        <div class="timer-unit"><div class="timer-num" id="t-s">00</div><div class="timer-unit-label">seg</div></div>
+      </div>
+    </div>
+    <div class="price-box">
+      <span class="price-original">De $34.00</span>
+      <div class="price-main"><sup>$</sup>17</div>
+      <p class="price-note">Pago único • Acceso inmediato • Descarga en PDF</p>
+      <a href="https://michaeldossantos.gumroad.com/l/desbloquea-tu-cuerpo" class="price-cta">Quiero Desbloquearme Ahora →</a>
+      <div class="price-guarantee"><div class="guarantee-icon">🔒</div><span>Pago 100% seguro • Garantía de 30 días • Sin preguntas</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="guarantee-section">
+  <div class="container">
+    <div class="guarantee-box">
+      <div class="guarantee-badge"><span class="days">30</span><span class="dias">DÍAS</span></div>
+      <div>
+        <h3 style="font-family:'Oswald',sans-serif; font-size:22px; text-transform:uppercase; margin-bottom:10px;">Garantía incondicional de 30 días</h3>
+        <p style="margin:0; font-size:14px; color:var(--gray);">Aplica el método durante 30 días. Si por cualquier motivo no te gusta el resultado, devolvemos el 100% de tu inversión. Sin burocracia. Sin preguntas. Sin riesgo para ti — todo el riesgo es nuestro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section">
+  <div class="container fade-up">
+    <span class="section-tag">Preguntas frecuentes</span>
+    <h2>Preguntas<br><span style="color:var(--red)">y respuestas</span></h2>
+    <div class="rule"></div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">¿Necesito estar en buena forma física para aplicar el método?<span class="faq-arrow">+</span></div>
+        <div class="faq-answer"><p>No. El Método Desbloquea no se trata de aptitud física. Se trata de consciencia corporal y expresión. Cualquier hombre, en cualquier nivel físico, puede aplicar los ejercicios desde el primer día.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">¿En cuánto tiempo veré resultados?<span class="faq-arrow">+</span></div>
+        <div class="faq-answer"><p>La mayoría de los lectores reporta notar cambios en la primera semana de práctica consistente. La transformación sólida — la que se convierte en identidad — ocurre en 21 días de aplicación diaria. Solo 5 a 10 minutos por día.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">¿Funciona para hombres introvertidos?<span class="faq-arrow">+</span></div>
+        <div class="faq-answer"><p>Especialmente para ellos. El hombre introvertido suele tener un bloqueo mayor — pero el impacto de la liberación es proporcional. La introversión no es un bloqueo. Son cosas distintas. El método trabaja con lo que está bloqueado, no con lo que es natural en ti.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">He leído muchos libros de desarrollo personal. ¿Por qué este sería diferente?<span class="faq-arrow">+</span></div>
+        <div class="faq-answer"><p>Porque este no es un libro sobre mentalidad. La mayoría de los libros de desarrollo trabajan solo la mente. El Método Desbloquea parte de la premisa de que la mente sigue al cuerpo — no al revés. Es un sistema de acción corporal, no de reflexión mental.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">¿Cómo recibo el eBook después de la compra?<span class="faq-arrow">+</span></div>
+        <div class="faq-answer"><p>Inmediatamente después de la confirmación del pago, recibes el enlace de descarga por correo electrónico. El acceso es instantáneo, disponible 24/7. El archivo es en PDF, compatible con cualquier dispositivo.</p></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">¿Y si no me gusta?<span class="faq-arrow">+</span></div>
+        <div class="faq-answer"><p>Tienes 30 días de garantía total. Si por cualquier motivo no te gusta — o simplemente cambias de opinión — solo envía un correo y devolvemos el 100% de tu inversión. Sin preguntas, sin burocracia, sin riesgo.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="fade-up">
+    <h2>La decisión<br><span style="color:var(--red)">es tuya.</span></h2>
+    <div class="rule" style="margin: 20px auto;"></div>
+    <p>Puedes seguir bloqueado. O puedes invertir $17 y empezar hoy.</p>
+    <p style="color:var(--gold); font-weight:600;">Tu cuerpo ya sabe lo que necesitas.</p>
+    <a href="https://michaeldossantos.gumroad.com/l/desbloquea-tu-cuerpo" class="hero-cta">Acceder al eBook Ahora →</a>
+    <p style="margin-top:16px; font-size:12px; color:var(--gray);">De <del>$34</del> por $17 • Acceso inmediato • Garantía de 30 días</p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo"><span>DTC</span> DESBLOQUEA TU CUERPO</div>
+  <div class="footer-tagline">CUERPO • CONFIANZA • PRESENCIA</div>
+  <div class="footer-copy">© 2026 Desbloquea Tu Cuerpo — Michael Soares. Todos los derechos reservados.</div>
+</footer>
+
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-price"><del>$34</del> → <strong>$17</strong></div>
+  <a href="https://michaeldossantos.gumroad.com/l/desbloquea-tu-cuerpo" class="sticky-btn">Desbloquearme Ahora →</a>
+</div>
+
+<script>
+  const fadeEls = document.querySelectorAll('.fade-up');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  fadeEls.forEach(el => observer.observe(el));
+
+  const sticky = document.getElementById('stickyCta');
+  window.addEventListener('scroll', () => { sticky.classList.toggle('visible', window.scrollY > 600); });
+
+  function startTimer() {
+    const KEY = 'dtc_timer_end';
+    let end = sessionStorage.getItem(KEY);
+    if (!end) { end = Date.now() + 24 * 60 * 60 * 1000; sessionStorage.setItem(KEY, end); }
+    end = parseInt(end);
+    function pad(n) { return String(n).padStart(2, '0'); }
+    function tick() {
+      const diff = Math.max(0, end - Date.now());
+      document.getElementById('t-h').textContent = pad(Math.floor(diff / 3600000));
+      document.getElementById('t-m').textContent = pad(Math.floor((diff % 3600000) / 60000));
+      document.getElementById('t-s').textContent = pad(Math.floor((diff % 60000) / 1000));
+      if (diff > 0) setTimeout(tick, 1000);
+    }
+    tick();
+  }
+  startTimer();
+
+  function toggleFaq(el) {
+    const answer = el.nextElementSibling;
+    const isOpen = el.classList.contains('open');
+    document.querySelectorAll('.faq-question.open').forEach(q => { q.classList.remove('open'); q.nextElementSibling.classList.remove('open'); });
+    if (!isOpen) { el.classList.add('open'); answer.classList.add('open'); }
+  }
+</script>
+</body>
+</html>
